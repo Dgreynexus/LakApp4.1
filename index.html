@@ -77,11 +77,34 @@ footer{text-align:center;color:var(--muted);padding:30px}
 .continue{display:flex;justify-content:space-between;gap:8px;align-items:center;margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
 .continue button{border:1px solid var(--line);background:transparent;border-radius:9px;padding:7px 10px;color:var(--g)}
 @keyframes cardIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+
+/* ===== LakApp V4.1 Visual Handbook Layer ===== */
+.chapter{position:relative;overflow:hidden}
+.chapter::before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,#0F4AD4,#08A9E0,#FFF112,#EC3237,#239B4B);opacity:.9}
+.chapter-visual{margin:-5px -25px 20px;padding:18px 20px;background:linear-gradient(135deg,#0F4AD4,#08A9E0);color:#fff;border-radius:14px 14px 10px 10px;position:relative;overflow:hidden}
+.chapter-visual h3{margin:0;font-size:1.18rem}.chapter-visual p{margin:3px 0 0;opacity:.9;font-size:.85rem}
+.chapter-visual .cv-icon{position:absolute;right:18px;top:8px;font-size:52px;opacity:.18;animation:lakFloat 3.5s ease-in-out infinite}
+.visual-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin:14px 0 20px}
+.visual-card{background:linear-gradient(145deg,#fff,#F6F9FF);border:1px solid #D9E3F5;border-radius:14px;padding:13px;box-shadow:0 7px 18px rgba(15,74,212,.08);transition:.2s transform,.2s box-shadow}
+.visual-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(15,74,212,.14)}
+.visual-card .vc-icon{font-size:25px;display:block;margin-bottom:6px}.visual-card b{color:#0F4AD4;font-size:.9rem}.visual-card span{display:block;color:#5F6B85;font-size:.76rem;line-height:1.45;margin-top:3px}
+.visual-timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:16px 0 20px}
+.time-item{position:relative;text-align:center;padding:11px 5px;background:#F6F9FF;border:1px solid #D9E3F5;border-radius:12px;animation:lakRise .5s ease both}
+.time-item:nth-child(2){animation-delay:.08s}.time-item:nth-child(3){animation-delay:.16s}.time-item:nth-child(4){animation-delay:.24s}.time-item:nth-child(5){animation-delay:.32s}.time-item:nth-child(6){animation-delay:.40s}
+.time-item strong{display:block;color:#0F4AD4;font-size:.78rem}.time-item span{display:block;color:#5F6B85;font-size:.68rem;margin-top:3px}
+.discipline-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0 20px}
+.disc-item{color:#fff;border-radius:12px;padding:12px;text-align:center;font-weight:800;font-size:.8rem;box-shadow:0 6px 16px #0001}
+.disc-item:nth-child(1){background:#0F4AD4}.disc-item:nth-child(2){background:#EC3237}.disc-item:nth-child(3){background:#08A9E0}.disc-item:nth-child(4){background:#239B4B}
+.visual-note{padding:11px 13px;border-left:4px solid #FFF112;background:#FFFBD0;border-radius:9px;color:#25304a;font-size:.82rem;margin:12px 0 18px}
+@keyframes lakFloat{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-7px) rotate(3deg)}}
+@keyframes lakRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.visual-timeline{grid-template-columns:repeat(3,1fr)}.discipline-strip{grid-template-columns:repeat(2,1fr)}.chapter-visual{margin-left:-18px;margin-right:-18px}}
+@media(max-width:420px){.visual-timeline{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <header><div class="head">
-<div class="logo"><img src="icons/libas-logo.jpg" alt="Libas National High School logo"></div><div class="brand"><b>Libas National High School</b><small>LakApp • Student Digital Hub</small></div>
+<div class="logo"><img src="icons/libas-logo.jpg" alt="Libas National High School logo"></div><div class="brand"><b>Libas National High School</b><small>LakApp V4.1 • Student Digital Hub</small></div>
 <div class="actions"><button class="hbtn" id="home">Home</button><button class="hbtn" id="install" hidden>Install</button><button class="hbtn" id="theme">Dark</button></div>
 </div></header>
 

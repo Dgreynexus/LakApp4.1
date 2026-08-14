@@ -1,14 +1,20 @@
-# LakApp V4.1 — Visual Handbook
+# LakApp V4.1 — Clean Standalone Visual Edition
 
-Visual enhancements are added to selected handbook chapters while preserving the source handbook text.
+This package is specifically prepared for the `LakApp4.1` GitHub Pages repository.
 
-Enhanced:
-- Chapter 05 — Student Rights visual cards
-- Chapter 07 — Academic Regulations quick-reference cards
-- Chapter 08 — Student Services cards
-- Chapter 09 — School Hours timeline
-- Chapter 11 — Discipline principles banner
-- Chapter 13 — Disciplinary Cases visual categories
-- V4.1 branding and cache version
+## Visual upgrades
+- Chapter 05: student-rights visual cards
+- Chapter 07: academic-regulations visual cards
+- Chapter 08: student-services visual cards
+- Chapter 09: school-hours visual timeline
+- Chapter 11: discipline framework visual strip/cards
+- Chapter 13: disciplinary-case visual categories
+- Libas NHS blue/yellow/red/green/cyan branding
+- V4.1 page title and PWA metadata
+- Fresh service-worker cache name
 
-Important: the visual cards are quick-reference summaries. The original handbook text remains the authoritative content shown below each visual layer.
+## Source integrity
+The original handbook text remains in the page. Visual cards are quick-reference summaries placed above the source text. The two source time statements (Chapter 09 and Chapter 11) are not silently reconciled.
+
+## Deployment
+Upload the contents of this ZIP to the repository root. Do not upload the ZIP file itself.

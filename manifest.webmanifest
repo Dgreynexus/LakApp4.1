@@ -1,6 +1,6 @@
 {
-  "name": "LakApp \u2022 Libas NHS Student Hub V4.1",
-  "short_name": "LakApp",
+  "name": "LakApp V4.1 \u2022 Libas NHS Student Hub",
+  "short_name": "LakApp V4.1",
   "description": "Libas National High School Visual Student Handbook",
   "start_url": "./",
   "display": "standalone",
