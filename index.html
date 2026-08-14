@@ -7,7 +7,7 @@
 <meta name="description" content="LakApp — Libas National High School Interactive Student Handbook">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
-<title>LakApp • Libas NHS Student Hub</title>
+<title>LakApp • Libas NHS Student Hub V4.1</title>
 <style>
 :root{--red:#EC3237;--leaf:#239B4B;--cyan:#08A9E0;--g:#0F4AD4;--g2:#0A8FCE;--gold:#FFF112;--mint:#FFFBD0;--bg:#F6F9FF;--card:#fff;--text:#17203A;--muted:#5F6B85;--line:#D9E3F5;--shadow:0 12px 32px rgba(11,77,59,.10)}
 *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
@@ -58,6 +58,25 @@ footer{text-align:center;color:var(--muted);padding:30px}
 @media(max-width:950px){.hero-art{opacity:.3;right:-4%}.visual-grid{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}aside{position:relative;top:0;height:auto}}
 @media(max-width:560px){.hero{min-height:390px;padding:23px}.hero-art{width:85%;right:-12%;opacity:.28}.visual-grid{grid-template-columns:1fr}.actions .hbtn{padding:7px}.brand small{display:none}}
 @media print{header,.hero-art,.visual-grid,.section-title,aside,.search,.panel,.backtop{display:none!important}.layout{display:block}.chapter{box-shadow:none;break-inside:avoid}}
+
+/* V4.1 visual handbook layer */
+.chapter{position:relative;overflow:hidden}
+.chapter::before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:linear-gradient(90deg,#0F4AD4,#08A9E0,#FFF112,#EC3237,#239B4B)}
+.chapter h2{font-size:clamp(1.35rem,3vw,2rem);padding-top:7px}
+.chapter[data-ch="5"] .visual-strip,.chapter[data-ch="7"] .visual-strip,.chapter[data-ch="8"] .visual-strip,.chapter[data-ch="9"] .visual-strip,.chapter[data-ch="11"] .visual-strip,.chapter[data-ch="13"] .visual-strip{display:grid}
+.visual-strip{display:none;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 20px}
+.vmini{background:linear-gradient(135deg,#f8fbff,#fff);border:1px solid #d8e4f5;border-radius:14px;padding:13px;box-shadow:0 6px 18px #0f4ad41a;animation:cardIn .55s ease both}
+.vmini .mi{font-size:26px;display:block;margin-bottom:5px}
+.vmini b{color:#0F4AD4;font-size:.88rem}.vmini span{display:block;color:#5f6b85;font-size:.76rem;line-height:1.4}
+.timeline{display:flex;gap:7px;overflow:auto;padding:8px 2px 14px;margin:8px 0 18px}
+.tstep{min-width:125px;position:relative;background:#fff;border:1px solid #d8e4f5;border-radius:14px;padding:12px;box-shadow:0 6px 18px #0f4ad41a}
+.tstep:after{content:"→";position:absolute;right:-10px;top:27px;color:#0F4AD4;font-weight:900}.tstep:last-child:after{display:none}
+.tstep strong{display:block;color:#0F4AD4}.tstep small{color:#5f6b85}
+.rule-banner{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.rule-pill{padding:8px 11px;border-radius:999px;font-weight:800;font-size:.78rem;background:#eef5ff;color:#0F4AD4;border:1px solid #d8e4f5}
+.rule-pill:nth-child(2){background:#fffbd0;color:#806b00}.rule-pill:nth-child(3){background:#eaf8ef;color:#18713a}.rule-pill:nth-child(4){background:#fff0f0;color:#b41e25}
+.continue{display:flex;justify-content:space-between;gap:8px;align-items:center;margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
+.continue button{border:1px solid var(--line);background:transparent;border-radius:9px;padding:7px 10px;color:var(--g)}
+@keyframes cardIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -73,7 +92,7 @@ footer{text-align:center;color:var(--muted);padding:30px}
 <h1>Welcome to LakApp</h1>
 <p>A visual, interactive way to explore the Libas National High School Student Handbook. Learn your rights, responsibilities, school services, academic regulations, and discipline procedures.</p>
 <div class="hero-buttons"><button class="primary" onclick="document.getElementById('handbook').scrollIntoView({behavior:'smooth'})">Explore Handbook</button><button class="secondary" onclick="openPanel('quiz')">Take the Quiz</button></div>
-<div class="stats"><span class="stat">📖 16 Chapters</span><span class="stat">🔎 Searchable</span><span class="stat">📱 PWA</span><span class="stat">⚡ Offline-ready</span></div>
+<div class="stats"><span class="stat">📖 16 Chapters • V4.1 Visual Edition</span><span class="stat">🔎 Searchable</span><span class="stat">📱 PWA</span><span class="stat">⚡ Offline-ready</span></div>
 </div>
 <svg class="hero-art" viewBox="0 0 480 340" aria-label="Animated school illustration" role="img">
 <g class="orbit" fill="none" stroke="#FFF112" stroke-width="2" opacity=".5"><ellipse cx="260" cy="160" rx="180" ry="95"/><ellipse cx="260" cy="160" rx="95" ry="180"/></g>
@@ -223,7 +242,7 @@ Makabansa</p></div>
       <button class="backtop" onclick="scrollTo({top:0,behavior:'smooth'})">↑ Back to dashboard</button>
     </article></main></div>
 </div>
-<footer>LakApp • Libas National High School • V3 Libas Color Edition</footer>
+<footer>LakApp • Libas National High School • V4.1 Libas Visual Handbook</footer>
 
 <script>
 const chapters=[...document.querySelectorAll('.chapter')];
